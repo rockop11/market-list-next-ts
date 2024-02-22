@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
-import { AddProductForm } from "../components"
 import { getSession } from '@auth0/nextjs-auth0';
+import { redirect } from "next/navigation";
+import { AddProductForm, Modal } from "@/app/components"
 
 const CreateListPage = async () => {
   const session = await getSession();
@@ -10,7 +10,7 @@ const CreateListPage = async () => {
   }
 
   return (
-    <div className="w-[100%] flex flex-col items-center pt-4">
+    <div className="w-[100%] flex flex-col items-center">
       <AddProductForm />
     </div>
   )

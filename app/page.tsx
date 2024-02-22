@@ -1,5 +1,5 @@
 import { getSession } from '@auth0/nextjs-auth0';
-import { UnloggedCard, ActionButton } from "./components";
+import { UnloggedCard, ActionButton } from "@/app/components";
 
 const Page = async () => {
 	const session = await getSession()
@@ -10,7 +10,7 @@ const Page = async () => {
 				session?.user ? (
 					<div className="
 						flex flex-wrap gap-4 justify-center
-						w-[100%] p-4
+						w-[100%]
 						md:max-w-[425px]
 					">
 						<ActionButton url="/create-list" label="Crear Lista" />
